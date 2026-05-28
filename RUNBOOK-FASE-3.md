@@ -72,6 +72,10 @@ Importa `demandas.db.json`, `triagens.db.json`, `decisoes.db.json`, `briefings.d
 - Banco SQLite: `dlogica_api.db` (sempre na raiz do repositorio)
 - Migracoes: `alembic upgrade head`
 
+## CI (GitHub Actions)
+
+Em cada push ou PR para `main`, o workflow `verify-fase3` executa pytest, vitest e Playwright (mesma ordem de `verify-fase3.ps1`).
+
 ## Checklist de fechamento de ciclo
 
 - [ ] `verify-fase3.ps1` sem falhas

@@ -19,9 +19,9 @@ Base inicial do projeto criada com PRD funcional, quatro rodadas de validacao co
 
 ## Próximo passo recomendado
 
-Evolucao opcional (restante):
-- rodada 5 de validacao com casos reais;
-- toasts e polish extra de produto (ver `ANALISE-UI-PRODUTO-MANTER-REDESENHAR-PRIORIZAR.md`).
+1. **Rodada 5 (casos reais):** preencher `VALIDACAO-RODADA-5.md` com 3 demandas da operacao; publicar `AUDITORIA-RODADA-5.md`.
+2. **CI:** workflow `.github/workflows/verify-fase3.yml` roda em push/PR para `main`.
+3. Evolucao opcional: toasts e polish de produto (`ANALISE-UI-PRODUTO-MANTER-REDESENHAR-PRIORIZAR.md`).
 
 Concluido recentemente:
 - exportar diagnostico em PDF (botao na ficha);

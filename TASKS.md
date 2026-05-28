@@ -312,6 +312,20 @@ Manter fila operacional enxuta da rodada atual com status rastreavel.
 - prioridade: media
 - criterio_de_pronto: `scripts/migrate_json_to_sqlite.py` importa `*.db.json` para `dlogica_api.db`.
 
+### TSK-044
+
+- descricao: CI GitHub Actions (verify-fase3)
+- status: concluida
+- prioridade: alta
+- criterio_de_pronto: workflow `.github/workflows/verify-fase3.yml` em push/PR para main.
+
+### TSK-045
+
+- descricao: rodada 5 — validacao com casos reais (governanca)
+- status: pendente
+- prioridade: alta
+- criterio_de_pronto: `VALIDACAO-RODADA-5.md` preenchido com 3 casos + `AUDITORIA-RODADA-5.md`.
+
 ## Regra de atualizacao
 
 - atualizar este arquivo ao concluir cada tarefa;

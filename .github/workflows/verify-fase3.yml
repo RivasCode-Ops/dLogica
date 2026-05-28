@@ -1,0 +1,55 @@
+name: verify-fase3
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  suite-critica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-fase3.txt
+
+      - name: Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: ui/package-lock.json
+
+      - name: Dependencias Python
+        run: pip install -r requirements-fase3.txt
+
+      - name: Migracoes Alembic
+        run: alembic upgrade head
+
+      - name: Testes API (pytest)
+        run: pytest -q tests/api/
+
+      - name: Dependencias UI
+        working-directory: ui
+        run: npm ci
+
+      - name: Testes UI (vitest)
+        working-directory: ui
+        run: npm test
+
+      - name: Playwright Chromium
+        working-directory: ui
+        run: npx playwright install chromium --with-deps
+
+      - name: Testes E2E (Playwright)
+        working-directory: ui
+        run: npm run test:e2e
