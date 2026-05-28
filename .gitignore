@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.db
+.env
+.env.*
+.claude/
+ui/node_modules/
+ui/dist/
+ui/test-results/
+ui/playwright-report/
+ui/blob-report/

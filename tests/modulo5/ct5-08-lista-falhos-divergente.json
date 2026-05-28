@@ -1,0 +1,27 @@
+{
+  "auditoria_id": "AUD-CT5-08",
+  "demanda_id": "DLG-20260528-101",
+  "briefing_id": "BRF-20260528-101",
+  "escopo_referencia": "Teste CT5-08",
+  "gates_criticos": {
+    "aderencia_problema_objetivo": "ok",
+    "escopo_limites": "ok",
+    "rastreabilidade_decisao": "falhou",
+    "qualidade_minima_verificavel": "ok"
+  },
+  "gates_importantes": {
+    "coerencia_tipo_solucao": "ok",
+    "proximo_passo_executavel": "ok",
+    "clareza_entrega": "ok",
+    "descartes_rastreaveis": "ok"
+  },
+  "veredito": "reprovado",
+  "gates_criticos_falhos": [],
+  "gates_importantes_falhos": [],
+  "resumo_objetivo": "Teste de lista de gates falhos inconsistente.",
+  "acoes_obrigatorias_antes_do_aceite": [
+    "Corrigir rastreabilidade"
+  ],
+  "data_auditoria": "2026-05-28T21:16:00Z",
+  "responsavel_auditoria": "time-dlogica"
+}

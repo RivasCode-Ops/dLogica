@@ -1,0 +1,64 @@
+﻿[
+    {
+        "auditoria_id":  "AUD-20260528-101",
+        "demanda_id":  "DLG-20260528-101",
+        "briefing_id":  "BRF-20260528-101",
+        "escopo_referencia":  "Fase 1 - Modulos 1 a 4",
+        "gates_criticos":  {
+                               "aderencia_problema_objetivo":  "ok",
+                               "escopo_limites":  "ok",
+                               "rastreabilidade_decisao":  "ok",
+                               "qualidade_minima_verificavel":  "ok"
+                           },
+        "gates_importantes":  {
+                                  "coerencia_tipo_solucao":  "ok",
+                                  "proximo_passo_executavel":  "ok",
+                                  "clareza_entrega":  "ok",
+                                  "descartes_rastreaveis":  "ok"
+                              },
+        "veredito":  "aprovado",
+        "gates_criticos_falhos":  [
+
+                                  ],
+        "gates_importantes_falhos":  [
+
+                                     ],
+        "resumo_objetivo":  "Entrega aderente ao briefing, com rastreabilidade completa e criterios verificaveis.",
+        "acoes_obrigatorias_antes_do_aceite":  [
+
+                                               ],
+        "data_auditoria":  "2026-05-28T21:00:00Z",
+        "responsavel_auditoria":  "time-dlogica"
+    },
+    {
+        "auditoria_id":  "AUD-E2E-20260528-001",
+        "demanda_id":  "DLG-E2E-20260528-001",
+        "briefing_id":  "BRF-E2E-20260528-001",
+        "escopo_referencia":  "Fluxo integrado fase 2 - teste positivo",
+        "gates_criticos":  {
+                               "aderencia_problema_objetivo":  "ok",
+                               "escopo_limites":  "ok",
+                               "rastreabilidade_decisao":  "ok",
+                               "qualidade_minima_verificavel":  "ok"
+                           },
+        "gates_importantes":  {
+                                  "coerencia_tipo_solucao":  "ok",
+                                  "proximo_passo_executavel":  "ok",
+                                  "clareza_entrega":  "ok",
+                                  "descartes_rastreaveis":  "ok"
+                              },
+        "veredito":  "aprovado",
+        "gates_criticos_falhos":  [
+
+                                  ],
+        "gates_importantes_falhos":  [
+
+                                     ],
+        "resumo_objetivo":  "Fluxo integrado aderente ao metodo com rastreabilidade e metricas obrigatorias completas.",
+        "acoes_obrigatorias_antes_do_aceite":  [
+
+                                               ],
+        "data_auditoria":  "2026-05-28T22:25:00Z",
+        "responsavel_auditoria":  "time-dlogica"
+    }
+]

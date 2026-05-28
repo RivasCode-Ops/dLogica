@@ -2,7 +2,7 @@
 
 ## Estado atual
 
-Projeto em fase inicial de definição funcional, com PRD enxuto consolidado.
+Projeto em fase inicial de definicao funcional, com PRD enxuto consolidado e primeira rodada de validacao executada.
 
 ## Hipótese central
 
@@ -10,16 +10,19 @@ Se a demanda for triada com lógica de pertinência e classificação de origem,
 
 ## Objetivo imediato
 
-Validar o fluxo de MVP:
-1. captura da demanda;
-2. triagem e pertinência;
-3. definição de tipo de solução;
-4. geração de briefing final.
+Consolidar padrao operacional apos a primeira rodada:
+1. manter qualidade de triagem e recomendacao de solucao;
+2. padronizar criterios de promocao para app;
+3. aumentar rastreabilidade da justificativa de decisao.
 
 ## Decisão em vigor
 
 Priorizar clareza e rastreabilidade antes de automações avançadas.
 Fluxo de execucao oficial: dLogica define -> workbench governa -> Cursor executa -> auditoria valida.
+
+Resultado de referencia atual:
+- rodada 1 validada em `VALIDACAO-RODADA-1.md`;
+- criterio de promocao formalizado em `CRITERIOS-PROMOCAO-APP.md`.
 
 ## Restrições atuais
 

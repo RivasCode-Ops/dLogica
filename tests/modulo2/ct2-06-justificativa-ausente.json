@@ -1,0 +1,31 @@
+{
+  "demanda_id": "DLG-20260528-101",
+  "triagem_itens": [
+    {
+      "triagem_item_id": "TRI-CT2-06-01",
+      "demanda_id": "DLG-20260528-101",
+      "texto_item": "Item sem justificativa",
+      "classe_item": "contexto",
+      "status_pertinencia": "revisar",
+      "data_classificacao": "2026-05-28T17:20:00Z"
+    }
+  ],
+  "triagem_resumo": {
+    "demanda_id": "DLG-20260528-101",
+    "total_itens": 1,
+    "totais_por_classe": {
+      "fato": 0,
+      "hipotese": 0,
+      "sugestao": 0,
+      "contexto": 1,
+      "ruido": 0
+    },
+    "totais_por_status": {
+      "manter": 0,
+      "revisar": 1,
+      "backlog": 0,
+      "descartar": 0
+    },
+    "data_fechamento_triagem": "2026-05-28T17:25:00Z"
+  }
+}

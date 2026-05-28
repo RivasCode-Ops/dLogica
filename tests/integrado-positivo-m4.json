@@ -1,0 +1,33 @@
+{
+  "briefing_id": "BRF-E2E-20260528-001",
+  "demanda_id": "DLG-E2E-20260528-001",
+  "problema": "A operacao acumula retrabalho por falta de visao de prioridades e distribuicao de responsabilidade.",
+  "objetivo": "Padronizar decisao semanal com foco em tarefas criticas.",
+  "criterios_de_decisao": [
+    "frequencia de consulta",
+    "impacto operacional",
+    "tempo de resposta"
+  ],
+  "solucao_sugerida": "painel",
+  "proximo_passo": "Implantar painel semanal com indicadores de prioridade e responsavel.",
+  "metrica_tempo": "Reduzir reuniao de priorizacao de 80 para 40 minutos.",
+  "metrica_impacto": "Elevar cumprimento de tarefas criticas para 85%.",
+  "metrica_risco": "Reduzir tarefas criticas sem dono de 9 para 2 por semana.",
+  "baseline_numerico_inicial": "9 tarefas criticas/semana sem dono",
+  "meta_numerica_primeira_iteracao": "<=2 tarefas criticas sem dono em 3 semanas",
+  "fora_de_escopo": [
+    "App completo de gestao na fase inicial"
+  ],
+  "descartes_relevantes": [
+    {
+      "item": "Relatorio mensal sem acompanhamento semanal",
+      "justificativa_curta": "Nao responde ao ritmo da operacao."
+    },
+    {
+      "item": "Automacao total com IA no primeiro ciclo",
+      "justificativa_curta": "Risco alto sem rotina basica validada."
+    }
+  ],
+  "data_geracao": "2026-05-28T22:20:00Z",
+  "responsavel_geracao": "time-dlogica"
+}

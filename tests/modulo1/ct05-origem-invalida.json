@@ -1,0 +1,7 @@
+{
+  "demanda_id": "DLG-CT05-001",
+  "data_registro": "2026-05-28T12:31:00Z",
+  "origem_principal": "outra",
+  "demanda_bruta": "Demanda valida em texto, mas com origem invalida para teste.",
+  "status": "capturado"
+}

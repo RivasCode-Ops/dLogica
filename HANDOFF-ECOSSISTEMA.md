@@ -6,7 +6,9 @@ Pacote base de ecossistema consolidado no `dLogica` com:
 - visão geral (`README-ECOSSISTEMA.md`);
 - contexto vigente (`CONTEXT-ECOSSISTEMA.md`);
 - fluxo operacional (`MAPA-DE-FLUXO.md`);
-- base do produto (`README.md`, `CONTEXT.md`, `PRD-INICIAL.md`, `HANDOFF.md`).
+- base do produto (`README.md`, `CONTEXT.md`, `PRD-INICIAL.md`, `HANDOFF.md`);
+- validacao inicial (`VALIDACAO-RODADA-1.md`);
+- criterio operacional (`CRITERIOS-PROMOCAO-APP.md`).
 
 ## Já consolidado
 
@@ -20,17 +22,17 @@ Pacote base de ecossistema consolidado no `dLogica` com:
 
 ## Pendências abertas
 
-- registrar decisão formal de ecossistema (arquivo de decisão inicial).
-- validar 3 casos reais do MVP para medir utilidade prática.
-- definir critérios de promoção de demanda para implementação técnica.
+- executar rodada 2 com casos mais ambiguos para testar estabilidade;
+- calibrar template unico de briefing final para auditoria cruzada;
+- definir rotina de revisao mensal de criterios de promocao.
 
 ## Próxima ação recomendada
 
-1. Registrar a decisão estrutural em `DECISAO-ECOSSISTEMA-INICIAL.md`.
-2. Rodar primeira rodada com 3 demandas reais.
-3. Atualizar `HANDOFF.md` e `CONTEXT.md` com os achados da validação.
+1. Executar rodada 2 (5 casos) e comparar metricas com a rodada 1.
+2. Ajustar `CRITERIOS-PROMOCAO-APP.md` com base nos desvios encontrados.
+3. Atualizar `HANDOFF.md` e `CONTEXT.md` com decisao de calibracao.
 
 ## Ponto de retomada
 
-Começar por `MAPA-DE-FLUXO.md` e executar o ciclo:
+Comecar por `VALIDACAO-RODADA-1.md`, revisar `CRITERIOS-PROMOCAO-APP.md` e executar o ciclo:
 `dLogica -> workbench -> Cursor -> auditoria`.

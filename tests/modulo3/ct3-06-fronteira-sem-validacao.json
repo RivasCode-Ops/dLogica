@@ -1,0 +1,12 @@
+{
+  "decisao_id": "DEC-CT3-06",
+  "demanda_id": "DLG-20260528-101",
+  "tipo_recomendado": "painel",
+  "justificativa_principal": "Teste de fronteira sem bloco de validacao complementar.",
+  "alternativas_consideradas": [
+    "documento_estruturado",
+    "fluxo_manual"
+  ],
+  "data_decisao": "2026-05-28T19:05:00Z",
+  "responsavel_decisao": "time-dlogica"
+}

@@ -1,0 +1,10 @@
+{
+  "decisao_id": "DEC-CT3-09",
+  "demanda_id": "DLG-20260528-101",
+  "tipo_recomendado": "automacao",
+  "alternativas_consideradas": [
+    "fluxo_manual"
+  ],
+  "data_decisao": "2026-05-28T19:20:00Z",
+  "responsavel_decisao": "time-dlogica"
+}

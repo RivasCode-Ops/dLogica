@@ -1,0 +1,9 @@
+{
+  "demanda_id": "DLG-20260528-101",
+  "data_registro": "2026-05-28T12:00:00Z",
+  "origem_principal": "usuario",
+  "demanda_bruta": "Texto alterado indevidamente para testar bloqueio de sobrescrita da demanda bruta.",
+  "status": "capturado",
+  "titulo_curto": "Teste sobrescrita",
+  "responsavel_triagem": "time-dlogica"
+}

@@ -1,0 +1,18 @@
+{
+  "decisao_id": "DEC-CT3-07",
+  "demanda_id": "DLG-20260528-101",
+  "tipo_recomendado": "documento_estruturado",
+  "justificativa_principal": "Teste de zona cinza sem evidencia obrigatoria.",
+  "alternativas_consideradas": [
+    "painel"
+  ],
+  "data_decisao": "2026-05-28T19:10:00Z",
+  "responsavel_decisao": "time-dlogica",
+  "validacao_painel_documento": {
+    "aplicada": true,
+    "score_classificacao": 5,
+    "criterio_mais_relevante": "frequencia de consulta",
+    "decisao_final": "documento_estruturado",
+    "justificativa_curta": "Uso eventual sem leitura recorrente."
+  }
+}

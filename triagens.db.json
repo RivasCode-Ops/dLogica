@@ -1,0 +1,96 @@
+﻿[
+    {
+        "demanda_id":  "DLG-20260528-101",
+        "triagem_itens":  [
+                              {
+                                  "triagem_item_id":  "TRI-20260528-101-01",
+                                  "demanda_id":  "DLG-20260528-101",
+                                  "texto_item":  "Clientes reclamam de atraso no atendimento.",
+                                  "classe_item":  "fato",
+                                  "status_pertinencia":  "manter",
+                                  "justificativa_curta":  "Evidencia direta do problema principal.",
+                                  "data_classificacao":  "2026-05-28T16:00:00Z",
+                                  "origem_item":  "usuario",
+                                  "nota_pertinencia":  5,
+                                  "responsavel_classificacao":  "time-dlogica"
+                              },
+                              {
+                                  "triagem_item_id":  "TRI-20260528-101-02",
+                                  "demanda_id":  "DLG-20260528-101",
+                                  "texto_item":  "Automatizar tudo com IA resolveria tudo.",
+                                  "classe_item":  "sugestao",
+                                  "status_pertinencia":  "descartar",
+                                  "justificativa_curta":  "Prematuro para fase atual e sem evidencia de base.",
+                                  "data_classificacao":  "2026-05-28T16:01:00Z",
+                                  "origem_item":  "IA",
+                                  "nota_pertinencia":  1,
+                                  "responsavel_classificacao":  "time-dlogica"
+                              }
+                          ],
+        "triagem_resumo":  {
+                               "demanda_id":  "DLG-20260528-101",
+                               "total_itens":  2,
+                               "totais_por_classe":  {
+                                                         "fato":  1,
+                                                         "hipotese":  0,
+                                                         "sugestao":  1,
+                                                         "contexto":  0,
+                                                         "ruido":  0
+                                                     },
+                               "totais_por_status":  {
+                                                         "manter":  1,
+                                                         "revisar":  0,
+                                                         "backlog":  0,
+                                                         "descartar":  1
+                                                     },
+                               "data_fechamento_triagem":  "2026-05-28T16:05:00Z"
+                           }
+    },
+    {
+        "demanda_id":  "DLG-E2E-20260528-001",
+        "triagem_itens":  [
+                              {
+                                  "triagem_item_id":  "TRI-E2E-001",
+                                  "demanda_id":  "DLG-E2E-20260528-001",
+                                  "texto_item":  "Ha tarefas criticas sem dono definido.",
+                                  "classe_item":  "fato",
+                                  "status_pertinencia":  "manter",
+                                  "justificativa_curta":  "Impacta o fluxo principal da operacao.",
+                                  "data_classificacao":  "2026-05-28T22:05:00Z",
+                                  "origem_item":  "usuario",
+                                  "nota_pertinencia":  5,
+                                  "responsavel_classificacao":  "time-dlogica"
+                              },
+                              {
+                                  "triagem_item_id":  "TRI-E2E-002",
+                                  "demanda_id":  "DLG-E2E-20260528-001",
+                                  "texto_item":  "Criar um app completo agora resolveria tudo.",
+                                  "classe_item":  "sugestao",
+                                  "status_pertinencia":  "descartar",
+                                  "justificativa_curta":  "Escopo elevado antes de validar rotina minima.",
+                                  "data_classificacao":  "2026-05-28T22:06:00Z",
+                                  "origem_item":  "IA",
+                                  "nota_pertinencia":  1,
+                                  "responsavel_classificacao":  "time-dlogica"
+                              }
+                          ],
+        "triagem_resumo":  {
+                               "demanda_id":  "DLG-E2E-20260528-001",
+                               "total_itens":  2,
+                               "totais_por_classe":  {
+                                                         "fato":  1,
+                                                         "hipotese":  0,
+                                                         "sugestao":  1,
+                                                         "contexto":  0,
+                                                         "ruido":  0
+                                                     },
+                               "totais_por_status":  {
+                                                         "manter":  1,
+                                                         "revisar":  0,
+                                                         "backlog":  0,
+                                                         "descartar":  1
+                                                     },
+                               "data_fechamento_triagem":  "2026-05-28T22:10:00Z"
+                           }
+    }
+]

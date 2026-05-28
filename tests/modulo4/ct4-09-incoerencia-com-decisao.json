@@ -1,0 +1,33 @@
+{
+  "briefing_id": "BRF-CT4-09",
+  "demanda_id": "DLG-20260528-101",
+  "problema": "Problema valido para teste de incoerencia com decisao.",
+  "objetivo": "Objetivo valido para teste.",
+  "criterios_de_decisao": [
+    "criterio 1",
+    "criterio 2",
+    "criterio 3"
+  ],
+  "solucao_sugerida": "automacao",
+  "proximo_passo": "Executar rotina automatizada inicial.",
+  "metrica_tempo": "Reduzir de 90 para 45 minutos.",
+  "metrica_impacto": "Aumentar concluidas para 85%.",
+  "metrica_risco": "Reduzir tarefas sem dono.",
+  "baseline_numerico_inicial": "11 tarefas criticas/semana sem dono",
+  "meta_numerica_primeira_iteracao": "<=3 tarefas criticas sem dono em 3 semanas",
+  "fora_de_escopo": [
+    "Integracao completa com ERP"
+  ],
+  "descartes_relevantes": [
+    {
+      "item": "Relatorio mensal textual",
+      "justificativa_curta": "Nao atende frequencia necessaria."
+    },
+    {
+      "item": "App novo imediato",
+      "justificativa_curta": "Escopo alto na fase inicial."
+    }
+  ],
+  "data_geracao": "2026-05-28T20:25:00Z",
+  "responsavel_geracao": "time-dlogica"
+}

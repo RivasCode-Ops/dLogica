@@ -1,0 +1,26 @@
+{
+  "decisao_id": "DEC-20260528-101",
+  "demanda_id": "DLG-20260528-101",
+  "tipo_recomendado": "painel",
+  "justificativa_principal": "A demanda exige leitura recorrente de indicadores e comparacao de status para tomada de decisao semanal.",
+  "alternativas_consideradas": [
+    "documento_estruturado",
+    "fluxo_manual"
+  ],
+  "data_decisao": "2026-05-28T18:00:00Z",
+  "responsavel_decisao": "time-dlogica",
+  "riscos_identificados": [
+    "Excesso de visualizacoes sem acao",
+    "Escopo de painel crescer cedo demais"
+  ],
+  "proximo_passo_recomendado": "Montar painel minimo com 3 indicadores operacionais.",
+  "confianca_decisao": 4,
+  "validacao_painel_documento": {
+    "aplicada": true,
+    "score_classificacao": 6,
+    "criterio_mais_relevante": "recorrencia de consulta",
+    "decisao_final": "painel",
+    "justificativa_curta": "Consulta recorrente com comparacao de desvio.",
+    "evidencia_teste_7_dias": "Equipe consultou 4 vezes na semana e ajustou prioridades com base no quadro visual."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "demanda_id": "DLG-E2E-20260528-001",
+  "data_registro": "2026-05-28T22:00:00Z",
+  "origem_principal": "usuario",
+  "demanda_bruta": "Preciso reduzir retrabalho operacional com uma rotina clara de priorizacao semanal.",
+  "status": "capturado",
+  "titulo_curto": "Reduzir retrabalho operacional",
+  "responsavel_triagem": "time-dlogica",
+  "contexto_inicial": "Operacao com fila de tarefas criticas sem dono claro"
+}

@@ -1,0 +1,21 @@
+{
+  "decisao_id": "DEC-E2E-20260528-001",
+  "demanda_id": "DLG-E2E-20260528-001",
+  "tipo_recomendado": "painel",
+  "justificativa_principal": "A demanda exige acompanhamento recorrente de prioridades e desvios operacionais.",
+  "alternativas_consideradas": [
+    "documento_estruturado",
+    "fluxo_manual"
+  ],
+  "data_decisao": "2026-05-28T22:15:00Z",
+  "responsavel_decisao": "time-dlogica",
+  "confianca_decisao": 4,
+  "validacao_painel_documento": {
+    "aplicada": true,
+    "score_classificacao": 6,
+    "criterio_mais_relevante": "recorrencia de consulta",
+    "decisao_final": "painel",
+    "justificativa_curta": "Consulta semanal recorrente com comparacao de status.",
+    "evidencia_teste_7_dias": "No piloto semanal, a consulta recorrente melhorou a priorizacao das tarefas criticas."
+  }
+}

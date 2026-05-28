@@ -1,0 +1,11 @@
+{
+  "decisao_id": "DEC-CT3-05",
+  "demanda_id": "DLG-20260528-101",
+  "tipo_recomendado": "sistema",
+  "justificativa_principal": "Tentativa com tipo fora do enum oficial para validar bloqueio.",
+  "alternativas_consideradas": [
+    "painel"
+  ],
+  "data_decisao": "2026-05-28T19:00:00Z",
+  "responsavel_decisao": "time-dlogica"
+}

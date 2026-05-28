@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Demanda",
+  "type": "object",
+  "required": [
+    "demanda_id",
+    "data_registro",
+    "origem_principal",
+    "demanda_bruta",
+    "status"
+  ],
+  "properties": {
+    "demanda_id": {
+      "type": "string",
+      "minLength": 5
+    },
+    "data_registro": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "origem_principal": {
+      "type": "string",
+      "enum": ["usuario", "IA", "referencia_externa", "regra_interna"]
+    },
+    "demanda_bruta": {
+      "type": "string",
+      "minLength": 10
+    },
+    "status": {
+      "type": "string",
+      "enum": ["capturado", "classificado", "avaliado", "aprovado", "backlog", "descartado"]
+    },
+    "titulo_curto": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 80
+    },
+    "responsavel_triagem": {
+      "type": "string"
+    },
+    "contexto_inicial": {
+      "type": "string"
+    },
+    "restricoes_iniciais": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "observacoes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+  "decisao_id": "DEC-CT4-08-APOIO",
+  "demanda_id": "DLG-20260528-APP01",
+  "tipo_recomendado": "app",
+  "justificativa_principal": "A dor e recorrente, com fluxo repetivel e ganho claro de digitalizacao.",
+  "alternativas_consideradas": [
+    "automacao",
+    "agente"
+  ],
+  "data_decisao": "2026-05-28T20:35:00Z",
+  "responsavel_decisao": "time-dlogica",
+  "gate_promocao_app": {
+    "score_total": 13,
+    "decisao_promocao": "sim",
+    "justificativa_promocao": "Criterios minimos atendidos para app."
+  }
+}

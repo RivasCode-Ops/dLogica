@@ -1,0 +1,22 @@
+{
+  "demanda_id": "DLG-20260528-101",
+  "triagem_itens": [],
+  "triagem_resumo": {
+    "demanda_id": "DLG-20260528-101",
+    "total_itens": 0,
+    "totais_por_classe": {
+      "fato": 0,
+      "hipotese": 0,
+      "sugestao": 0,
+      "contexto": 0,
+      "ruido": 0
+    },
+    "totais_por_status": {
+      "manter": 0,
+      "revisar": 0,
+      "backlog": 0,
+      "descartar": 0
+    },
+    "data_fechamento_triagem": "2026-05-28T17:40:00Z"
+  }
+}

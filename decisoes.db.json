@@ -1,0 +1,66 @@
+﻿[
+    {
+        "decisao_id":  "DEC-20260528-101",
+        "demanda_id":  "DLG-20260528-101",
+        "tipo_recomendado":  "painel",
+        "justificativa_principal":  "A demanda exige leitura recorrente de indicadores e comparacao de status para tomada de decisao semanal.",
+        "alternativas_consideradas":  [
+                                          "documento_estruturado",
+                                          "fluxo_manual"
+                                      ],
+        "data_decisao":  "2026-05-28T18:00:00Z",
+        "responsavel_decisao":  "time-dlogica",
+        "riscos_identificados":  [
+                                     "Excesso de visualizacoes sem acao",
+                                     "Escopo de painel crescer cedo demais"
+                                 ],
+        "proximo_passo_recomendado":  "Montar painel minimo com 3 indicadores operacionais.",
+        "confianca_decisao":  4,
+        "validacao_painel_documento":  {
+                                           "aplicada":  true,
+                                           "score_classificacao":  6,
+                                           "criterio_mais_relevante":  "recorrencia de consulta",
+                                           "decisao_final":  "painel",
+                                           "justificativa_curta":  "Consulta recorrente com comparacao de desvio.",
+                                           "evidencia_teste_7_dias":  "Equipe consultou 4 vezes na semana e ajustou prioridades com base no quadro visual."
+                                       }
+    },
+    {
+        "decisao_id":  "DEC-CT4-08-APOIO",
+        "demanda_id":  "DLG-20260528-APP01",
+        "tipo_recomendado":  "app",
+        "justificativa_principal":  "A dor e recorrente, com fluxo repetivel e ganho claro de digitalizacao.",
+        "alternativas_consideradas":  [
+                                          "automacao",
+                                          "agente"
+                                      ],
+        "data_decisao":  "2026-05-28T20:35:00Z",
+        "responsavel_decisao":  "time-dlogica",
+        "gate_promocao_app":  {
+                                  "score_total":  13,
+                                  "decisao_promocao":  "sim",
+                                  "justificativa_promocao":  "Criterios minimos atendidos para app."
+                              }
+    },
+    {
+        "decisao_id":  "DEC-E2E-20260528-001",
+        "demanda_id":  "DLG-E2E-20260528-001",
+        "tipo_recomendado":  "painel",
+        "justificativa_principal":  "A demanda exige acompanhamento recorrente de prioridades e desvios operacionais.",
+        "alternativas_consideradas":  [
+                                          "documento_estruturado",
+                                          "fluxo_manual"
+                                      ],
+        "data_decisao":  "2026-05-28T22:15:00Z",
+        "responsavel_decisao":  "time-dlogica",
+        "confianca_decisao":  4,
+        "validacao_painel_documento":  {
+                                           "aplicada":  true,
+                                           "score_classificacao":  6,
+                                           "criterio_mais_relevante":  "recorrencia de consulta",
+                                           "decisao_final":  "painel",
+                                           "justificativa_curta":  "Consulta semanal recorrente com comparacao de status.",
+                                           "evidencia_teste_7_dias":  "No piloto semanal, a consulta recorrente melhorou a priorizacao das tarefas criticas."
+                                       }
+    }
+]

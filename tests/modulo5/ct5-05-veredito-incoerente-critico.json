@@ -1,0 +1,27 @@
+{
+  "auditoria_id": "AUD-CT5-05",
+  "demanda_id": "DLG-20260528-101",
+  "briefing_id": "BRF-20260528-101",
+  "escopo_referencia": "Teste CT5-05",
+  "gates_criticos": {
+    "aderencia_problema_objetivo": "falhou",
+    "escopo_limites": "ok",
+    "rastreabilidade_decisao": "ok",
+    "qualidade_minima_verificavel": "ok"
+  },
+  "gates_importantes": {
+    "coerencia_tipo_solucao": "ok",
+    "proximo_passo_executavel": "ok",
+    "clareza_entrega": "ok",
+    "descartes_rastreaveis": "ok"
+  },
+  "veredito": "aprovado",
+  "gates_criticos_falhos": [
+    "aderencia_problema_objetivo"
+  ],
+  "gates_importantes_falhos": [],
+  "resumo_objetivo": "Teste de veredito incoerente com falha critica.",
+  "acoes_obrigatorias_antes_do_aceite": [],
+  "data_auditoria": "2026-05-28T21:10:00Z",
+  "responsavel_auditoria": "time-dlogica"
+}
