@@ -19,6 +19,7 @@ Validar o fluxo de MVP:
 ## Decisão em vigor
 
 Priorizar clareza e rastreabilidade antes de automações avançadas.
+Fluxo de execucao oficial: dLogica define -> workbench governa -> Cursor executa -> auditoria valida.
 
 ## Restrições atuais
 

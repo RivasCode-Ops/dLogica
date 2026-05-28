@@ -15,6 +15,18 @@ O PRD inicial completo está em `dlogica/PRD-INICIAL.md`.
 - `CONTEXT.md`: estado atual e direção em vigor.
 - `HANDOFF.md`: continuidade entre sessões/agentes.
 - `PRD-INICIAL.md`: escopo funcional e regras do produto.
+- `README-ECOSSISTEMA.md`: integração entre dLogica, workbench, execução e auditoria.
+- `CONTEXT-ECOSSISTEMA.md`: estado oficial da separação entre definição, governança, execução e validação.
+- `MAPA-DE-FLUXO.md`: ordem operacional de uso dos blocos no ciclo real.
+- `HANDOFF-ECOSSISTEMA.md`: continuidade de sessão do pacote de ecossistema.
+- `DECISAO-ECOSSISTEMA-INICIAL.md`: decisão formal da separação estrutural do ecossistema.
+
+## Regra de operação
+
+1. dLogica define a solução.
+2. workbench governa a direção e o registro.
+3. Cursor implementa o escopo aprovado.
+4. Auditoria valida antes de aceitar entrega.
 
 ## Próximo passo recomendado
 
