@@ -97,3 +97,16 @@ def test_modulo2_demanda_inexistente(api_client) -> None:
     resp = api_client.post("/api/v1/modulo2/triagens", json=payload)
     assert resp.status_code == 400
     assert "modulo 1" in resp.json()["detail"].lower()
+
+
+def test_validacao_pydantic_em_portugues(api_client) -> None:
+    seed_through_triagem(api_client, "DLG-NEG-PT-01")
+    payload = load_json("integrado-positivo-m3.json")
+    payload["demanda_id"] = "DLG-NEG-PT-01"
+    payload["validacao_painel_documento"]["score_classificacao"] = 11
+    resp = api_client.post("/api/v1/modulo3/decisoes", json=payload)
+    assert resp.status_code == 422
+    detail = resp.json()["detail"]
+    assert isinstance(detail, list)
+    msgs = " ".join(item["msg"] for item in detail)
+    assert "menor ou igual" in msgs

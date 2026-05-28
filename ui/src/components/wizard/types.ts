@@ -7,9 +7,9 @@ export type ModuloFormProps = {
 
 export const WIZARD_STEPS = [
   { id: "m1", title: "O que chegou?", subtitle: "Captura da demanda" },
-  { id: "m2", title: "Separar sinais", subtitle: "Triagem e classificacao" },
-  { id: "m3", title: "Tipo de solucao", subtitle: "Decisao recomendada" },
-  { id: "m4", title: "Plano e metricas", subtitle: "Briefing final" },
+  { id: "m2", title: "Separar sinais", subtitle: "Triagem e classificação" },
+  { id: "m3", title: "Tipo de solução", subtitle: "Decisão recomendada" },
+  { id: "m4", title: "Plano e métricas", subtitle: "Briefing final" },
   { id: "m5", title: "Gate de aceite", subtitle: "Auditoria e veredito" },
 ] as const;
 

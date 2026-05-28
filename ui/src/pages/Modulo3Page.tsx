@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { nowIso, parseListInput, postJson } from "../api/client";
+import { DemandaIdReadonly } from "../components/DemandaIdReadonly";
 import { FormField } from "../components/FormField";
 import { StatusBanner } from "../components/StatusBanner";
 import type { ModuloFormProps } from "../components/wizard/types";
@@ -77,11 +78,12 @@ export function Modulo3Page({ embedded = false, onSuccess }: ModuloFormProps = {
         </>
       ) : null}
       <StatusBanner kind={banner.kind} message={banner.message} />
+      <DemandaIdReadonly demandaId={demandaId} embedded={embedded} />
 
       <form className="form-grid" onSubmit={onSubmit}>
         {!embedded ? (
-          <FormField label="demanda_id">
-            <input value={demandaId} readOnly />
+          <FormField label="ID do caso (somente leitura)">
+            <input value={demandaId} readOnly aria-readonly />
           </FormField>
         ) : null}
 

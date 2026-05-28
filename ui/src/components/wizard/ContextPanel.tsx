@@ -52,7 +52,11 @@ export function ContextPanel({ demandaId, detalhe, loading }: Props) {
           </Link>
         </>
       ) : (
-        <p className="wizard-context-muted">Preencha a etapa 1 para iniciar o caso.</p>
+        <p className="wizard-context-muted">
+          {demandaId.length >= 5
+            ? "Salve a etapa atual com «Salvar e continuar» para atualizar o contexto. Se o painel continuar vazio, verifique a API em :8000."
+            : "Informe um ID de caso com pelo menos 5 caracteres na barra lateral."}
+        </p>
       )}
     </aside>
   );

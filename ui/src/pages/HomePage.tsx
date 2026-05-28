@@ -24,10 +24,11 @@ export function HomePage() {
       })
       .catch((error) => {
         setCasos(null);
-        setBanner({
-          kind: "error",
-          message: error instanceof Error ? error.message : "Falha ao listar casos",
-        });
+        const msg =
+          error instanceof Error
+            ? error.message
+            : "Nao foi possivel carregar os casos. Verifique se a API esta ativa.";
+        setBanner({ kind: "error", message: msg });
       });
   }
 
@@ -41,13 +42,13 @@ export function HomePage() {
   return (
     <div className="home-grid">
       <section className="home-card home-card-highlight">
-        <h2>Do caos a uma decisao clara</h2>
+        <h2>Do caos a uma decisão clara</h2>
         <p className="lead">
-          Cada caso passa por captura, triagem, decisao, briefing e auditoria — com rastreabilidade
+          Cada caso passa por captura, triagem, decisão, briefing e auditoria — com rastreabilidade
           completa.
         </p>
         <p className="lead-muted">
-          Abra um caso para ver o diagnostico ou inicie uma sessao guiada.
+          Abra um caso para ver o diagnóstico ou inicie uma sessão guiada.
         </p>
       </section>
 
@@ -95,7 +96,7 @@ export function HomePage() {
                     to={`/casos/${encodeURIComponent(item.demanda_id)}`}
                     className="caso-ficha-link"
                   >
-                    Diagnostico
+                    Diagnóstico
                   </Link>
                 </div>
               </li>
@@ -105,7 +106,7 @@ export function HomePage() {
 
         <p className="home-actions">
           <Link to={`/sessao/${encodeURIComponent(demandaId)}`} className="btn-primary-link">
-            Sessao guiada (wizard)
+            Sessão guiada (wizard)
           </Link>
           <Link to="/modulo1" className="btn-secondary" style={{ marginLeft: "0.5rem" }}>
             Modo avancado M1

@@ -18,7 +18,7 @@ export function Layout() {
       <header className="app-header">
         <div>
           <p className="eyebrow">dLogica</p>
-          <h1>Decisoes estruturadas</h1>
+          <h1>Decisões estruturadas</h1>
         </div>
         <Link className="home-link" to="/">
           Casos
@@ -26,7 +26,10 @@ export function Layout() {
       </header>
 
       <aside className="app-sidebar">
-        <FormField label="demanda_id ativa" hint="Compartilhada entre modulos">
+        <FormField
+          label="ID do caso ativo"
+          hint="Compartilhado entre módulos; altere só para iniciar outro caso."
+        >
           <input
             value={demandaId}
             onChange={(e) => setDemandaId(e.target.value)}
@@ -35,7 +38,7 @@ export function Layout() {
         </FormField>
 
         <Link className="nav-link sessao-link" to={`/sessao/${encodeURIComponent(demandaId)}`}>
-          Sessao guiada (wizard)
+          Sessão guiada (wizard)
         </Link>
 
         <nav className="module-nav">

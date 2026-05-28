@@ -20,10 +20,30 @@ describe("formatApiError", () => {
 
   it("formata lista de erros de validacao", () => {
     const msg = formatApiError(
-      { detail: [{ loc: ["body", "demanda_bruta"], msg: "String should have at least 10 characters" }] },
+      { detail: [{ loc: "demanda_bruta", msg: "Deve ter no minimo 10 caracteres." }] },
       422,
     );
     expect(msg).toContain("demanda_bruta");
-    expect(msg).toContain("at least 10");
+    expect(msg).toContain("no minimo 10");
+  });
+
+  it("traduz 404 generico da listagem", () => {
+    const msg = formatApiError({ detail: "Not Found" }, 404);
+    expect(msg).toContain("Nao foi possivel carregar");
+  });
+
+  it("traduz mensagem pydantic em ingles no cliente", () => {
+    const msg = formatApiError(
+      {
+        detail: [
+          {
+            loc: "body.validacao_painel_documento.score_classificacao",
+            msg: "Input should be less than or equal to 10",
+          },
+        ],
+      },
+      422,
+    );
+    expect(msg).toContain("menor ou igual a 10");
   });
 });

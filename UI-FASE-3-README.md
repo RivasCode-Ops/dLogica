@@ -31,6 +31,12 @@ npm run dev
 
 Acesse: **http://127.0.0.1:5174** (ou `http://localhost:5174`)
 
+### Variável de ambiente (opcional)
+
+Por padrão, `VITE_API_BASE_URL` fica **vazio** e o Vite faz proxy de `/api` e `/health` para `http://127.0.0.1:8000`. Não é necessário `.env` no dia a dia se você usar `start-fase3.ps1`.
+
+Se a listagem de casos mostrar erro de API, reinicie o uvicorn na **raiz do repositório** (processos antigos em `:8000` podem não expor `GET /api/v1/demandas`). Veja `ui/.env.example`.
+
 > **Importante:** a porta `5173` costuma estar ocupada pelo projeto `Quadro-Negro` (`C:\_PROJETOS\Quadro-Negro`). Se você abrir `http://localhost:5173`, verá outro app — não é o dLogica.
 
 ### Subir tudo de uma vez (Windows)

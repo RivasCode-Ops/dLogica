@@ -69,6 +69,19 @@ export function SessaoWizardPage() {
     setActiveIndex((prev) => Math.min(prev + 1, WIZARD_STEPS.length - 1));
   }
 
+  function handleProximaEtapa() {
+    const proximoIndice = activeIndex + 1;
+    if (proximoIndice > completedThrough) {
+      const avancar = window.confirm(
+        "Esta etapa ainda não foi salva na API. Deseja avançar mesmo assim? Os dados do formulário podem ser perdidos.",
+      );
+      if (!avancar) {
+        return;
+      }
+    }
+    setActiveIndex(proximoIndice);
+  }
+
   const completedThrough = detalhe?.etapas_concluidas ?? 0;
   const step = WIZARD_STEPS[activeIndex];
   const allDone = detalhe !== null && detalhe.proxima_etapa === null && detalhe.etapas_concluidas >= 5;
@@ -106,7 +119,7 @@ export function SessaoWizardPage() {
     <div className="wizard-shell">
       <header className="wizard-header">
         <div>
-          <p className="eyebrow">dLogica — Sessao guiada</p>
+          <p className="eyebrow">dLogica — Sessão guiada</p>
           <h1>{step.title}</h1>
           <p className="lead">{step.subtitle}</p>
         </div>
@@ -155,16 +168,16 @@ export function SessaoWizardPage() {
           type="button"
           className="btn-secondary"
           disabled={activeIndex >= WIZARD_STEPS.length - 1}
-          onClick={() => setActiveIndex((i) => i + 1)}
+          onClick={handleProximaEtapa}
         >
-          Proxima etapa
+          Próxima etapa
         </button>
         <button
           type="button"
           className="btn-secondary"
           onClick={() => navigate(`/sessao/${encodeURIComponent(activeDemandaId)}`)}
         >
-          Recarregar sessao
+          Recarregar sessão
         </button>
       </footer>
     </div>
