@@ -1,5 +1,10 @@
+import { jsPDF } from "jspdf";
 import { labelOrigem, labelSolucao, labelVeredito } from "./labels";
 import type { DemandaDetalhe } from "../types/demanda";
+
+const PDF_MARGIN = 18;
+const PDF_LINE = 6;
+const PDF_WIDTH = 174;
 
 export function buildDiagnosticoMarkdown(demandaId: string, detalhe: DemandaDetalhe): string {
   const { resumo } = detalhe;
@@ -61,4 +66,83 @@ export function downloadDiagnosticoMarkdown(demandaId: string, detalhe: DemandaD
   anchor.download = `dlogica-${demandaId}.md`;
   anchor.click();
   URL.revokeObjectURL(url);
+}
+
+function writePdfLines(
+  doc: jsPDF,
+  y: { value: number },
+  text: string,
+  options?: { bold?: boolean; size?: number; gapAfter?: number },
+): void {
+  const bold = options?.bold ?? false;
+  const size = options?.size ?? 10;
+  const gapAfter = options?.gapAfter ?? 0;
+  doc.setFont("helvetica", bold ? "bold" : "normal");
+  doc.setFontSize(size);
+  const lines = doc.splitTextToSize(text, PDF_WIDTH) as string[];
+  for (const line of lines) {
+    if (y.value > 275) {
+      doc.addPage();
+      y.value = PDF_MARGIN;
+    }
+    doc.text(line, PDF_MARGIN, y.value);
+    y.value += PDF_LINE;
+  }
+  y.value += gapAfter;
+}
+
+export function downloadDiagnosticoPdf(demandaId: string, detalhe: DemandaDetalhe): void {
+  const { resumo } = detalhe;
+  const doc = new jsPDF({ unit: "mm", format: "a4" });
+  const y = { value: PDF_MARGIN };
+
+  writePdfLines(doc, y, `Diagnostico dLogica`, { bold: true, size: 16, gapAfter: 2 });
+  writePdfLines(doc, y, demandaId, { bold: true, size: 13, gapAfter: 4 });
+  writePdfLines(doc, y, `Gerado em ${new Date().toLocaleString("pt-BR")}`, { size: 9, gapAfter: 6 });
+
+  writePdfLines(doc, y, "Status", { bold: true, size: 11, gapAfter: 2 });
+  writePdfLines(
+    doc,
+    y,
+    `Progresso: ${detalhe.etapas_concluidas}/${detalhe.etapas_total} | ${detalhe.proxima_etapa_label} | Veredito: ${labelVeredito(resumo.veredito)}`,
+    { gapAfter: 6 },
+  );
+
+  if (resumo.demanda_bruta) {
+    writePdfLines(doc, y, "Entrada original", { bold: true, size: 11, gapAfter: 2 });
+    writePdfLines(doc, y, resumo.demanda_bruta, { gapAfter: 6 });
+  }
+
+  writePdfLines(doc, y, "Problema", { bold: true, size: 11, gapAfter: 1 });
+  writePdfLines(doc, y, resumo.problema ?? "—", { gapAfter: 4 });
+  writePdfLines(doc, y, "Objetivo", { bold: true, size: 11, gapAfter: 1 });
+  writePdfLines(doc, y, resumo.objetivo ?? "—", { gapAfter: 6 });
+
+  writePdfLines(doc, y, "Decisao", { bold: true, size: 11, gapAfter: 2 });
+  writePdfLines(doc, y, `Solucao: ${labelSolucao(resumo.solucao_sugerida)}`, { gapAfter: 1 });
+  writePdfLines(doc, y, `Origem: ${labelOrigem(resumo.origem_principal)}`, { gapAfter: 6 });
+
+  if (resumo.baseline || resumo.meta) {
+    writePdfLines(doc, y, "Metricas", { bold: true, size: 11, gapAfter: 2 });
+    writePdfLines(doc, y, `Baseline: ${resumo.baseline ?? "—"}`, { gapAfter: 1 });
+    writePdfLines(doc, y, `Meta (1a iteracao): ${resumo.meta ?? "—"}`, { gapAfter: 6 });
+  }
+
+  if (resumo.proximo_passo) {
+    writePdfLines(doc, y, "Proximo passo", { bold: true, size: 11, gapAfter: 2 });
+    writePdfLines(doc, y, resumo.proximo_passo, { gapAfter: 6 });
+  }
+
+  if (resumo.auditoria_resumo) {
+    writePdfLines(doc, y, "Parecer da auditoria", { bold: true, size: 11, gapAfter: 2 });
+    writePdfLines(doc, y, resumo.auditoria_resumo, { gapAfter: 6 });
+  }
+
+  writePdfLines(doc, y, "Pipeline", { bold: true, size: 11, gapAfter: 2 });
+  for (const step of detalhe.pipeline) {
+    const mark = step.concluido ? "[x]" : "[ ]";
+    writePdfLines(doc, y, `${mark} ${step.modulo.toUpperCase()} — ${step.label}`);
+  }
+
+  doc.save(`dlogica-${demandaId}.pdf`);
 }

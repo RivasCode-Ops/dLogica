@@ -52,6 +52,16 @@ Endpoints (leitura + escrita):
 - `POST /api/v1/modulo4/briefings`
 - `POST /api/v1/modulo5/auditorias`
 
+## Migracao JSON legado (Fase 1 → SQLite)
+
+Na raiz do repositorio:
+
+```powershell
+python scripts/migrate_json_to_sqlite.py
+```
+
+Importa `demandas.db.json`, `triagens.db.json`, `decisoes.db.json`, `briefings.db.json` e `auditorias.db.json` para `dlogica_api.db`.
+
 ## Troubleshooting
 
 - Se `GET /api/v1/demandas` retornar 404 mas os `POST` funcionarem, reinicie a API (`start-fase3.ps1` ou `uvicorn` na raiz do repo). Processos antigos em `:8000` podem nao ter as rotas GET.

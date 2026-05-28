@@ -69,7 +69,7 @@ npm run test:e2e
 
 ## Exportar diagnostico
 
-Na ficha do caso (`/casos/:demandaId`), use **Exportar Markdown** para baixar o resumo em `.md`.
+Na ficha do caso (`/casos/:demandaId`), use **Exportar Markdown** (`.md`) ou **Exportar PDF** (`.pdf`).
 
 ## Fluxo recomendado
 

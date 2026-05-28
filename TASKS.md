@@ -291,6 +291,27 @@ Manter fila operacional enxuta da rodada atual com status rastreavel.
 - prioridade: media
 - criterio_de_pronto: botao na ficha/diagnostico gera arquivo `.md` downloadavel.
 
+### TSK-041
+
+- descricao: exportar diagnostico em PDF
+- status: concluida
+- prioridade: media
+- criterio_de_pronto: botao na ficha gera arquivo `.pdf` downloadavel via jsPDF.
+
+### TSK-042
+
+- descricao: paridade M1 API — status inicial capturado na criacao
+- status: concluida
+- prioridade: alta
+- criterio_de_pronto: POST novo demanda_id com status != capturado retorna 400; update permite outros status.
+
+### TSK-043
+
+- descricao: script migracao JSON legado para SQLite
+- status: concluida
+- prioridade: media
+- criterio_de_pronto: `scripts/migrate_json_to_sqlite.py` importa `*.db.json` para `dlogica_api.db`.
+
 ## Regra de atualizacao
 
 - atualizar este arquivo ao concluir cada tarefa;

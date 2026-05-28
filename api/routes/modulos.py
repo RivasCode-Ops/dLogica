@@ -42,6 +42,11 @@ def upsert_demanda(payload: DemandaIn) -> AcceptedOut:
         row = session.get(DemandaRecord, payload.demanda_id)
         payload_json = json.dumps(jsonable_encoder(payload), ensure_ascii=False)
         if row is None:
+            if payload.status != "capturado":
+                raise HTTPException(
+                    status_code=400,
+                    detail="Status inicial invalido para criacao. Use 'capturado'.",
+                )
             row = DemandaRecord(demanda_id=payload.demanda_id, payload_json=payload_json)
             session.add(row)
         else:

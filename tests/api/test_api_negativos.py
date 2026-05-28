@@ -82,9 +82,19 @@ def test_modulo5_briefing_inexistente(api_client) -> None:
     assert "briefing" in resp.json()["detail"].lower()
 
 
-def test_modulo1_status_nao_capturado_aceito_pela_api(api_client) -> None:
-    """API aceita status inicial diferente de capturado (regra extra pode entrar depois)."""
+def test_modulo1_status_inicial_invalido_na_criacao(api_client) -> None:
     payload = load_json("modulo1/ct06-status-inicial-invalido.json")
+    resp = api_client.post("/api/v1/modulo1/demandas", json=payload)
+    assert resp.status_code == 400
+    assert "capturado" in resp.json()["detail"].lower()
+
+
+def test_modulo1_update_permite_outro_status(api_client) -> None:
+    demanda_id = "DLG-NEG-M1-UPD"
+    seed_demanda(api_client, demanda_id)
+    payload = load_json("integrado-positivo-m1.json")
+    payload["demanda_id"] = demanda_id
+    payload["status"] = "classificado"
     resp = api_client.post("/api/v1/modulo1/demandas", json=payload)
     assert resp.status_code == 200
 

@@ -19,10 +19,14 @@ Base inicial do projeto criada com PRD funcional, quatro rodadas de validacao co
 
 ## Próximo passo recomendado
 
-Evolucao opcional:
-- exportar diagnostico em PDF;
-- migracao JSON legado → SQLite;
-- regra API alinhar status inicial M1 ao script PowerShell.
+Evolucao opcional (restante):
+- rodada 5 de validacao com casos reais;
+- toasts e polish extra de produto (ver `ANALISE-UI-PRODUTO-MANTER-REDESENHAR-PRIORIZAR.md`).
+
+Concluido recentemente:
+- exportar diagnostico em PDF (botao na ficha);
+- migracao JSON legado: `python scripts/migrate_json_to_sqlite.py`;
+- API M1 exige `status=capturado` na criacao (paridade PowerShell).
 
 Operacao diaria:
 - `.\verify-fase3.ps1` antes de cada ciclo;

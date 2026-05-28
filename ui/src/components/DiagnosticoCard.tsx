@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { downloadDiagnosticoMarkdown } from "../lib/exportDiagnostico";
+import { downloadDiagnosticoMarkdown, downloadDiagnosticoPdf } from "../lib/exportDiagnostico";
 import { labelOrigem, labelSolucao, labelVeredito } from "../lib/labels";
 import type { DemandaDetalhe } from "../types/demanda";
 
@@ -108,6 +108,13 @@ export function DiagnosticoCard({ demandaId, detalhe, compact = false }: Props) 
             onClick={() => downloadDiagnosticoMarkdown(demandaId, detalhe)}
           >
             Exportar Markdown
+          </button>
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => downloadDiagnosticoPdf(demandaId, detalhe)}
+          >
+            Exportar PDF
           </button>
           <Link to="/" className="btn-secondary">
             Todos os casos
